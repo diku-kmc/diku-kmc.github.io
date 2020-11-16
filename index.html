@@ -1,1 +1,158 @@
-hello world
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Kleene Meets Church</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#description">Project Description</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#publications">Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main role="main">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row justify-content-center mb-3">
+        <a href="https://diku-kmc.github.io/" class="float-left mr-3"><img alt="The Kleene Meets Church project" src="./kmc-notext.png" /></a>
+        <h1 class="display-3">Kleene<br/> Meets<br/> Church</h1>
+      </div>
+      <p>
+        Together with Excel spreadsheet formulas and SQL queries, regular expressions, as implemented in present-day programming languages such as Ruby, Python, PHP, Perl, Java, C#, C, etc., are probably the most widely used domain-specific sublanguage in programming practice. Yet they are astonishingly badly behaved, complicated to use and badly performing. Our work will contribute to the effective use of regular expressions having, simultaneously, predictable, tool-independent semantics, guaranteed safety properties and high computational performance, without requiring users — scientists, application domain experts, or programmers without a computer science background — to understand the mechanics of the underlying computer science theory.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <a href="#description"><h1 class="display-4" id="description">Project Description</h1></a>
+
+<h2>Summary</h1>
+<p>Recently, we [18] have discovered a fundamental connection between the classical theories of Kleene’s regular expressions [21] and Church’s Theory of Simple Types [8]. In contrast to the conventional theory of regular languages and finite automata, this connection interprets regular expressions as types, which provides a framework for the prevalent practical use of regular expressions for extracting information from an input, not just classifying it into accepting/nonaccepting.</p>
+<p>The overall objective of KMC is: to develop the theoretical foundations of this connection; to explore and demonstrate guaranteed safety and expressiveness of programming with regular expressions as types; and to drastically improve computational performance and scalability vis a vis commonly used regular expression processing tools, notably Perl. </p>
+<h2>Objectives</h1>
+<ol>
+<li>
+<p>(foundations, 4/2012-8/2013) develop and apply coinductive axiomatizations of regular language containment that admit functional interpretations of containment proofs as computationally efficient syntax-tree transformations;</p>
+</li>
+<li>
+<p>(algorithms, 4/2012-8/2013) design and implement guaranteed space- and time-efficient algorithms for regular expression based substring matching, parsing and transformation (specifically substitution), with improved predictable asymptotic scalability and with high-performance implementation on both single-core and next-generation parallel (specifically multicore and GPGPU) hardware architectures;</p>
+</li>
+<li>
+<p>(extensions, 9/2013-8/2014) apply the above logical and algorithmic techniques to commonly used extensions to regular expressions such as Kleene Algebra with Test, back references, probabilistic regular expressions (Hidden Markov Models), context-free grammars; and to achieve “pay-as-you-go” performance (that is, computationally inherently costly extensions such as backreferences only have a performance impact when actually used);</p>
+</li>
+<li>
+<p>(types, 3/2013-3/2015) design type systems and develop type inference techniques for scripting languages for agile, yet safe software development, using regular expressions as a refinement type system for strings;</p>
+</li>
+<li>(applications, 4/2012-8/2012 and 9/2013-3/2015) develop and empirically evaluate regular expression processing tools and libraries that are semantically, expressively and algorithmically substantially improved in comparison to so-called Perl-compliant regular expressions, which are widely used in programming practice.</li>
+</ol>
+<p>The project will partially consolidate, partially generalize much of the recent results on regular expression algorithmics, semantics, and (regular expression) types. It will draw on both algorithmic and programming-language theoretic techniques as well as practical software implementation for empirical evaluation. The results will be made widely available in the form of published articles and high-performance open source software and systems. </p>
+<h3>Scientific Relevance </h2>
+<p>Regular expressions have traditionally been treated automata-theoretically in theoretical computer science, with little concern for their common use to extract information. The current practice of regular expression based processing, as embodied in popular programming languages is conspicuously void of good execution performance, predictable semantics and robust behavior, despite regular expressions being more widespread than ever. This project seeks to fill this void by providing a coherent general type-theoretic framework for regular expressions as grammars, with containment (subtyping) interpreted as operationally significant — and practically useful and efficient — coercions. </p>
+<h3>Collaboration and Education</h2>
+<p>We are applying for funding for two Ph.D. students. They will be affiliated with the cross-institutional graduate program (Danish: forskeruddannelsesprogram) Foundations of Innovative Research-based Software Technolgy (FIRST); see first.dk. The project will be cooperating with Cornell University (work packages: foundations and extensions, 1 Ph.D. student), IBM Research and Purdue University (work packages: types and algorithms, applied specifically to the scripting language Thorn, 1 Ph.D. student), with applied research projects at DIKU, and with the Open Source community at large. We also expect additional cooperations to develop at a national level, specifically with the IT University of Copenhagen (work package: applications), with DTU (work package: algorithms) and with other departments at the Faculty of Science at U. Copenhagen, specifically the Niels Bohr Institute (work package: algorithms and applications, specifically relating to high-performance parallel hardware architectures) and the Bioinformatics Centre (work package: extensions, specifically probabilistic regular expressions). Finally it will be supported by a number of B.S. and M.S. theses at DIKU (work package: applications). </p>
+<h2>Background</h1>
+<p>Motivated by a finite state machine model of nerve nets, Kleene introduced regular expressions to describe and characterize the languages (sets of event sequences or strings) finite automata can recognize [21]. Subsequently, regular expressions have become a core part of classic automata and computability theory, with numerous applications in bioinformatics, compilers (lexical analysis), logic, natural language processing, program verification, protocol specification, query processing, security, XML access paths and document types, and, generally, all forms of searching, matching and substitution in texts or semi-structured data. </p>
+<h3>State of the Art and Research Hypotheses </h2>
+<p>Regular expressions became popular with the advent of Unix utilities in the 70s and 80s, notably egrep, sed and awk for flexible pattern matching for interactive search-and-replace op- erations, and in connection with Perl in the 90s for automatic processing of semi-structured data such as web logs stored in ordinary text files. The theoretically well-studied problem of regular expression matching in the sense of yielding only a yes/no answer is often insufficient in many applications, however. An intensional answer is required: where and how a string matches the parts of a regular expression and/or how the input is transformed. This makes automata-theoretic methods, which do not distinguish between regular expressions yielding the same yes/no answers, a priori inapplicable, and extending them is far from straightforward. Indeed, the popular Perl-compliant regular expressions (PCREs) [10] abandon predictable efficiency altogether and employ backtracking parsing, resulting in worst-case exponential time, stack overflows or even nontermination, even though acceptance testing can be performed in linear time and constant space. Part of the problem is that regular expressions are grammatically ambiguous [4, 30], which complicates efficient parsing and may yield unexpected results for a user. Grammatical ambiguity suggests the application of general context-free parsing techniques. Asymptotically faster techniques exploiting regularity have been devised, however. These are either not fully general [23], not linked up to ambiguity resolution [9], or require right-to-left input processing [11], which is not appropriate for streaming input, however. Our recently developed parsing method [25] based on bit-coded representations [18] shows that these restrictions can be overcome, while simultaneously improving execution time efficiency. We conjecture that even greater efficiency improvements are possible by combining finite state transducer minimization, efficient graph reachability algorithms and employing parallel prefix scan algorithms on GPGPU hardware. </p>
+<p>There is a number of sound and complete axiomatizations of regular expression equivalence [27, 22, 13]. These are neither related to algorithms for deciding membership, equivalence or containment (which typically rely on automata constructions) nor given computional interpretations of proofs as syntax-tree transformers, however. We conjecture that our coinductive approach [18] provides a general axiomatic framework for efficiently translating automata-based matching for streaming input back into a syntax-tree for the regular expression via the operational interpretation af equivalence (containment) proofs as syntax transformers. </p>
+<p>Motivated by designing static typing for XML document processing, regular expression types have been proposed [19] and implemented in novel functional and imperative programming language designs [1, 20, 12] with built-in XML support. Despite their name these are proper extensions of regular expressions. Regular expressions as (sub)types of strings occur for the first time in connection with regular expression parsing [11] and coinductive axiomatization of regular expression containment [18]. A particularly promising aspect of treating regular expressions as static types that appears to be unexplored so far is space-efficient bit coding for strings that are statically known to belong to a particular regular expression: bit coding is a grammatical data compression technique that can be traced back to the 80s (e.g. [6]) and is used in, e.g., oracle-based proof codings in proof-carrying code [24]. As it is orthogonal to statistical data compression, bit coding can achieve improved compression when combined with it. </p>
+<p>With the rise of scripting languages there is a renewed interest in Soft and Dynamic Typing [7, 15, 16] for integrating statically and dynamically type-checked software components [14, 29, 31]. Since modern scripting languages such as Thorn [2] operate on strings as a form of universal data type, we conjecture that regular expressions as static types provide a useful, if not necessary, refinement type system for strings to represent the result of transitioning (by inference or by hand annotations) dynamically typed code to statically typed code guaranteed to be safe from certain kinds of failures (crashes due to run-time type errors) and attacks (spoofing, injection).</p>
+<p>Beyond automata and regular expressions, coinduction occurs naturally as a way of reasoning about coalgebraic structures [28, 26, 3], notably for (bi)simulation. We conjecture that axiomatizations traditionally formulated using a unique fixed point rule can be given logically equivalent coinductive axiomatizations where the canonical operational interpretation of the coinduction rule as recursion [5] may lead to interesting Curry-Howard style operational interpretations of proofs. </p>
+<h2>Research Plan</h1>
+<p>The project will be structured into work packages aimed at accomplishing the individual objectives listed in Section 1, with semiannual milestones to evaluate progress and adjust the research plan according to the results and knowledge attained, plus an additional work package for coordination, collaboration and outreach: organizing international workshops, coordinating exchange visits with collaborators, managing web site (including resource portal on both theory and practice of regular expressions, presently only the latter exists), and facilitating popular scientific outreach activities (scientific survey, popular article on the speed of proofs).</p>
+<p>Publications will be targeted at top-tier conferences (LICS, POPL, PLDI, ICFP) and research journals (TOPLAS, TOCL, JFP), with running workshop and applied conference participation and publication for ongoing interaction with the research community.</p>
+<h2>References</h1>
+<ol>
+<li>Véronique Benzaken, Giuseppe Castagna, and Alain Frisch. CDuce: An XML-centric general-purpose language. In Proc. 8th ACM SIGPLAN Int’l Conf. on Functional Programming (ICFP), pages 51–63, New York, NY, USA, 2003. ACM.</li>
+<li>B. Bloom, J. Field, N. Nystrom, J. Östlund, G. Richards, R. Strnisa, J. Vitek, and T. Wrigstad. Thorn: Robust, concurrent, extensible scripting on the JVM. In Proceeding of the 24th ACM SIGPLAN conference on Object oriented programming systems languages and applications, pages 117–136. ACM, 2009.</li>
+<li>Marcello M. Bonsangue, Jan J. M. M. Rutten, and Alexandra Silva. A Kleene theorem for polynomial coalgebras. In Luca de Alfaro, editor, FOSSACS, volume 5504 of Lecture Notes in Computer Science, pages 122–136. Springer, 2009.</li>
+<li>Ronald Book, Shimon Even, Sheila Greibach, and Gene Ott. Ambiguity in graphs and expressions. IEEE Transactions on Computers, 20(2):149–153, 1971.</li>
+<li>Michael Brandt and Fritz Henglein. Coinductive axiomatization of recursive type equality and subtyping. Fundamenta Informaticae, 33(4):309–338, 1998.</li>
+<li>R.D. Cameron. Source encoding using syntactic information source models. Information Theory, IEEE Transactions on, 34(4):843–850, 1988.</li>
+<li>R. Cartwright and M. Fagan. Soft typing. In Proc. ACM SIGPLAN &#39;91 Conf. on Programming Language Design and Implementation, Toronto, Ontario, pages 278-292. ACM, ACM Press, June 1991.</li>
+<li>Alonzo Church. A formulation of the simple theory of types. J. Symb. Log., 5(2):56–68, 1940.</li>
+<li>Danny Dubé and Marc Feeley. Efficiently building a parse tree from a regular expression. Acta Informatica, 37(2):121–144, 2000.</li>
+<li>Jeffrey Friedl. Mastering Regular Expressions—Powerful Techniques for Perl and Other Tools. O’Reilly, 1997.</li>
+<li>A. Frisch and L. Cardelli. Greedy regular expression matching. In Proc. 31st International Colloquium on Automata, Languages and Programming (ICALP), volume 3142 of Lecture notes in computer science, pages 618–629, Turku, Finland, July 2004. Springer.</li>
+<li>Vladimir Gapeyev and Benjamin C. Pierce. Regular object types. In Luca Cardelli, editor, ECOOP, volume 2743 of Lecture Notes in Computer Science, pages 151–175. Springer, 2003.</li>
+<li>Clemens Grabmayer. Using proofs by coinduction to find “traditional” proofs. In Proc. 1st Conference on Algebra and Coalgebra in Computer Science (CALCO), number 3629 in Lecture Notes in Computer Science (LNCS). Springer, September 2005.</li>
+<li>Michael Greenberg, Benjamin C. Pierce, and Stephanie Weirich. Contracts made manifest. In POPL ’10: Proceedings of the 37th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages, pages 353–364, New York, NY, USA, 2010. ACM.</li>
+<li>Fritz Henglein. Dynamic typing. In Bernd Krieg-Brückner, editor, Proc. European Symp. on Programming (ESOP), Rennes, France, volume 582 of Lecture Notes in Computer Science, pages 233–253. Springer, February 1992.</li>
+<li>Fritz Henglein. Dynamic typing: Syntax and proof theory. Science of Computer Progamming (SCP), 22(3):197–230, 1994.</li>
+<li>Fritz Henglein. Generic discrimination: Sorting and partitioning unshared data in linear time. In James Hook and Peter Thiemann, editors, ICFP ’08: Proceeding of the 13th ACM SIGPLAN international conference on Functional programming, pages 91–102, New York, NY, USA, September 2008. ACM. Nominated by ACM SIGPLAN for CACM Research Highlights (see http://sigplan.org/CACMPapers.htm).</li>
+<li>Fritz Henglein and Lasse Nielsen. Regular expression containment: Coinductive axiomatization and computational interpretation. In Proc. 38th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (POPL), January 2011.</li>
+<li>Haruo Hosoya, Alain Frisch, and Giuseppe Castagna. Parametric polymorphism for XML. In Jens Palsberg and Martín Abadi, editors, POPL, pages 50–62. ACM, 2005.</li>
+<li>Haruo Hosoya and Benjamin C. Pierce. XDuce: A statically typed XML processing language. ACM Trans. Internet Technol., 3(2):117–148, 2003.</li>
+<li>S. C. Kleene. Representation of events in nerve nets and finite automata. Automata Studies, 1956.</li>
+<li>Dexter Kozen. A completeness theorem for Kleene algebras and the algebra of regular events. Information and Computation, 110(2):366–390, May 1994.</li>
+<li>V. Laurikari. Efficient submatch addressing for regular expressions. Master’s thesis, Helsinki University of Technology, 2001.</li>
+<li>George C. Necula and Shree Prakash Rahul. Oracle-based checking of untrusted software. In POPL, pages 142–154, 2001.</li>
+<li>Lasse Nielsen and Fritz Henglein. Bit-coded regular expression parsing. In Proc. 5th Int’l Conf. on Language and Automata Theory and Applications (LATA), Lecture Notes in Computer Science (LNCS). Springer, May 2011.</li>
+<li>Jan J. M. M. Rutten. Automata and coinduction (an exercise in coalgebra). In Davide Sangiorgi and Robert de Simone, editors, CONCUR, volume 1466 of Lecture Notes in Computer Science, pages 194–218. Springer, 1998.</li>
+<li>Arto Salomaa. Two complete axiom systems for the algebra of regular events. J. ACM, 13(1):158–169, 1966.</li>
+<li>Davide Sangiorgi. On the origins of bisimulation and coinduction. ACM Trans. Program. Lang. Syst., 31(4):1–41, 2009.</li>
+<li>Jeremy G. Siek and Philip Wadler. Threesomes, with and without blame. In POPL ’10: Proceedings of the 37th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages, pages 365–376, New York, NY, USA, 2010. ACM.</li>
+<li>Stijn Vansummeren. Type inference for unique pattern matching. ACM Trans. Program. Lang. Syst., 28(3):389–428, 2006.</li>
+<li>Tobias Wrigstad, Francesco Zappa Nardelli, Sylvain Lebresne, Johan Östlund, and Jan Vitek. Integrating typed and untyped code in a scripting language. In POPL ’10: Proceedings of the 37th annual ACM SIGPLAN-SIGACT symposium on Principles of programming languages, pages 377–388, New York, NY, USA, 2010. ACM.</li>
+</ol>
+<a href="#publications"><h1 class="display-4" id="publications">Publications</h1></a>
+<ul>
+<li><a href="./AiPL-CrashCourse.pdf">A Crash-Course in Regular Expression Parsing and Regular Expressions as Types</a>.</li>
+<li>Ulrik Terp Rasmussen. <a href="./rasmussen2017-0-thesis.pdf">Stream Processing using Grammars and Regular Expressions</a>. <em>PhD thesis</em>, January 2017. </li>
+<li>Bjørn Bugge Grathwohl, Fritz Henglein, Ulrik Terp Rasmussen, Kristoffer Aalund Søholm, and Sebastian Paaske Tørholm. <a href="./ghrst2016-0-paper.pdf">Kleenex: Compiling Nondeterministic Transducers to Deterministic Streaming Transducers</a>. <em>43rd ACM SIGPLAN Symposium on Principles of Programming Languages (POPL 2016), January 20–22, 2016, St. Petersburg, FL, USA.</em> </li>
+<li>Niels Bjørn Bugge Grathwohl. <a href="./grathwohl2015-0-thesis.pdf">Parsing with Regular Expressions &amp; Extensions to Kleene Algebra</a>. <em>PhD thesis,</em> November 2015. </li>
+<li>Bjørn Bugge Grathwohl, Ulrik Terp Rasmussen, and Fritz Henglein. Kleene Meets Church: <a href="./kmcposter.pdf">Regular Expressions as Types</a>. <em>Poster, student research competition at POPL 2015, </em> January 2015, Mumbai. </li>
+<li>Niels Bjørn Bugge Grathwohl, Fritz Henglein, and Ulrik Terp Rasmussen. <a href="./GHR14-0-paper.pdf">Optimally Streaming Greedy Regular Expression Parsing</a>. <em>Theoretical Aspects of Computing — ICTAC 2014, </em> pp. 224–240, September 2014, Bucharest. </li>
+<li>Niels Bjørn Bugge Grathwohl, Dexter Kozen, and Konstantinos Mamouras. <a href="./GKM14-0-paper.pdf">KAT + B!</a>. In <em>Proceedings of the Joint Meeting of the Twenty-Third EACSL Annual Conference on Computer Science Logic (CSL) and the Twenty-Ninth Annual ACM/IEEE Symposium on Logic in Computer Science (LICS)</em>, pp. 44:1–44:10, 2014. </li>
+<li>Niels Bjørn Bugge Grathwohl, Fritz Henglein, and Dexter Kozen. <a href="./GHK13a-0-paper.pdf">Infinitary Axiomatization of the Equational Theory of Context-Free Languages</a>. In <em>Proc. 9th Workshop Fixed Points in Computer Science</em> (FICS 2013), p. 44–55 — September 2013. </li>
+<li>Niels Bjørn Bugge Grathwohl, Fritz Henglein, Lasse Nielsen, and Ulrik Terp Rasmussen. <a href="./ghnr2013.pdf">Two-Pass Greedy Regular Expression Parsing</a>. In S. Konstantinidis, editor, <em>Implementation and Application of Automata</em>, volume 7982 of <em>Lecture Notes in Computer Science</em>, pages 60–71. Springer Berlin Heidelberg, 2013. </li>
+<li>Lasse Nielsen and Fritz Henglein. <a href="./henglein2011b.pdf">Bit-coded Regular Expression Parsing</a>. In <em>Proc. 5th Int’l Conf. on Language and Automata Theory and Applications (LATA)</em>, Lecture Notes in Computer Science (LNCS). Springer, May 2011. </li>
+<li>Fritz Henglein and Lasse Nielsen. <a href="./henglein2011.pdf">Regular Expression Containment: Coinductive Axiomatization and Computational Interpretation</a>. In <em>Proc. 38th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (POPL)</em>, January 2011. </li>
+</ul>
+<a href="#contact"><h1 class="display-4" id="contact">Contact</h1></a>
+<p>Fritz Henglein<br><a href="https://www.diku.dk/">Department of Computer Science (DIKU)</a><br><a href="https://www.ku.dk/">University of Copenhagen</a><br>Universitetsparken 1 <br>DK-2100 Copenhagen<br>Denmark</p>
+<p>Office: Room 3-2-17 <br>Email: <a href="mailto:henglein@diku.dk">henglein@diku.dk</a><br>Telephone: +45-30589576 (cell)</p>
+    <hr>
+  </div> <!-- /container -->
+
+</main>
